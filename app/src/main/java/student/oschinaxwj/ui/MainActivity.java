@@ -2,31 +2,43 @@ package student.oschinaxwj.ui;
 
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 import student.oschinaxwj.R;
 import student.oschinaxwj.widget.MyFragmentTabHost;
 
-public class MainActivity extends ActionBarActivity implements TabHost.OnTabChangeListener {
+public class MainActivity extends ActionBarActivity implements TabHost.OnTabChangeListener, View.OnClickListener {
+    @InjectView(R.id.quick_option_iv)
+    ImageView mQuickOptionIv;
     private MyFragmentTabHost mTabHost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.inject(this);
+        initView();
+
+    }
+
+    private void initView() {
         mTabHost = (MyFragmentTabHost) findViewById(android.R.id.tabhost);
         mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
         if (Build.VERSION.SDK_INT >= 11) {
             mTabHost.getTabWidget().setShowDividers(0);
         }
         initTabs();
+
+        mQuickOptionIv.setOnClickListener(this);
+
         mTabHost.setCurrentTab(0);
         mTabHost.setOnTabChangedListener(this);
     }
@@ -93,4 +105,27 @@ public class MainActivity extends ActionBarActivity implements TabHost.OnTabChan
             }
         }
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.quick_option_iv:  // 点击了快速操作按钮
+                showQuickOption();
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    // 显示快速操作界面
+    private void showQuickOption() {
+        final QuickOptionDialog dialog = new QuickOptionDialog(
+                MainActivity.this);
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.show();
+    }
+
+
 }

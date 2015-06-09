@@ -21,4 +21,13 @@
     <string name="hello_world">Hello world!</string>
 
     <string name="action_settings">Settings</string>
+
+    <!-- qucik option -->
+    <string name="quick_option_text">文字</string>
+    <string name="quick_option_album">相册</string>
+    <string name="quick_option_photo">拍照</string>
+    <string name="quick_option_voice">语音</string>
+    <string name="quick_option_note">便签</string>
+    <string name="quick_option_scan">扫一扫</string>
+    <string name="quick_option_find">找人</string>
 </resources>
