@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">开源中国</string>
+
+    <string name="main_tab_name_news">综合</string>
+    <string name="main_tab_name_tweet">动弹</string>
+    <string name="main_tab_name_quick">快速</string>
+    <string name="main_tab_name_question">问答</string>
+    <string name="main_tab_name_my">我</string>
+    <string name="main_tab_name_explore">发现</string>
+
+    <!-- slide menu -->
+    <string name="menu_rss">订阅</string>
+    <string name="menu_opensoft">开源软件</string>
+    <string name="menu_blog">博客区</string>
+    <string name="menu_quests">技术问答</string>
+    <string name="menu_setting">设置</string>
+    <string name="menu_exit">退出</string>
+
+    <string name="gitapp">Git客户端</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

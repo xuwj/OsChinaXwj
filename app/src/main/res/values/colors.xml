@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="drawer_menu_item_background_normal">#e2e2e2</color>
+    <color name="drawer_menu_item_background_pressed">#ebeceb</color>
+    <color name="white">#FFFFFF</color>
+
+</resources>
