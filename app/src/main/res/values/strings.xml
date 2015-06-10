@@ -30,4 +30,6 @@
     <string name="quick_option_note">便签</string>
     <string name="quick_option_scan">扫一扫</string>
     <string name="quick_option_find">找人</string>
+
+    <string name="actionbar_title_search">搜索</string>
 </resources>

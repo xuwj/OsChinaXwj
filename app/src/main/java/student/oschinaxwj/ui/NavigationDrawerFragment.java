@@ -1,6 +1,8 @@
 package student.oschinaxwj.ui;
 
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,9 @@ import student.oschinaxwj.base.BaseFragment;
  */
 public class NavigationDrawerFragment extends BaseFragment {
     private View mDrawerListView;
+    private ActionBarDrawerToggle mDrawerToggle;
+
+    private DrawerLayout mDrawerLayout;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -32,5 +37,22 @@ public class NavigationDrawerFragment extends BaseFragment {
         return mDrawerListView;
     }
 
+    @Override
+    public void onClick(View v) {
+        super.onClick(v);
+    }
 
+    @Override
+    public void initView(View view) {
+        super.initView(view);
+    }
+
+    @Override
+    public void initData() {
+        super.initData();
+    }
+
+    public static interface NavigationDrawerCallbacks {
+        void onNavigationDrawerItemSelected(int position);
+    }
 }

@@ -2,6 +2,13 @@
 <resources>
 
     <color name="white40">#40FFFFFF</color>
+    <color name="main_green">#40AA53</color>
+    <color name="main_gray">#9A9A9A</color>
+    <color name="main_black">#333</color>
+    <color name="main_purple">#576B95</color>
+    <color name="actionbar_background">@color/main_green</color>
+    <color name="transparent">#00000000</color>
+    <color name="window_background">#EBEBEB</color>
 
     <color name="drawer_menu_item_background_normal">#e2e2e2</color>
     <color name="drawer_menu_item_background_pressed">#ebeceb</color>
@@ -9,5 +16,8 @@
 
     <color name="list_item_background_normal">@color/white</color>
     <color name="list_item_background_pressed">#efefef</color>
+
+    <color name="actionbar_item_background_normal">@color/transparent</color>
+    <color name="actionbar_item_background_pressed">#0b751e</color>
 
 </resources>

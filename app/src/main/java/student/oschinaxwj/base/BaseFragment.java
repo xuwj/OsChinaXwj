@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import student.oschinaxwj.AppContext;
 import student.oschinaxwj.interf.BaseFragmentInterface;
 
 /**
@@ -21,6 +22,10 @@ public class BaseFragment extends Fragment implements
     public static int mState = STATE_NONE;
 
     protected LayoutInflater mInflater;
+
+    public AppContext getApplication() {
+        return (AppContext) getActivity().getApplication();
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

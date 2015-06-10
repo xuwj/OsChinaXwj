@@ -3,8 +3,11 @@ package student.oschinaxwj.ui;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
@@ -16,9 +19,13 @@ import student.oschinaxwj.R;
 import student.oschinaxwj.widget.MyFragmentTabHost;
 
 public class MainActivity extends ActionBarActivity implements TabHost.OnTabChangeListener, View.OnClickListener {
+    private NavigationDrawerFragment mNavigationDrawerFragment;
     @InjectView(R.id.quick_option_iv)
     ImageView mQuickOptionIv;
-    private MyFragmentTabHost mTabHost;
+    @InjectView(android.R.id.tabhost)
+    MyFragmentTabHost mTabHost;
+
+    private CharSequence mTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +37,9 @@ public class MainActivity extends ActionBarActivity implements TabHost.OnTabChan
     }
 
     private void initView() {
-        mTabHost = (MyFragmentTabHost) findViewById(android.R.id.tabhost);
+        mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.navigation_drawer);
+        mTitle = getTitle();
         mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
         if (Build.VERSION.SDK_INT >= 11) {
             mTabHost.getTabWidget().setShowDividers(0);
@@ -70,12 +79,21 @@ public class MainActivity extends ActionBarActivity implements TabHost.OnTabChan
         }
     }
 
- /*   @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+    public void restoreActionBar() {
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setTitle(mTitle);
+    }
 
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_activity_menu, menu);
+       /* if (!mNavigationDrawerFragment.isDrawerOpen()) {
+            restoreActionBar();
+            return true;
+        }*/
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -85,13 +103,9 @@ public class MainActivity extends ActionBarActivity implements TabHost.OnTabChan
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
-    }*/
+    }
 
     @Override
     public void onTabChanged(String tabId) {
