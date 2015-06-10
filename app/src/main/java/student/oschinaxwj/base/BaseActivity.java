@@ -49,6 +49,7 @@ public abstract class BaseActivity extends ActionBarActivity implements
 
         // 通过注解绑定控件
         ButterKnife.inject(this);
+        init(savedInstanceState);
         initView();
         initData();
     }
