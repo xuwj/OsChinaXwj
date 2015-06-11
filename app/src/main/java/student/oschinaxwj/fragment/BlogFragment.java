@@ -1,4 +1,4 @@
-package student.oschinaxwj.viewpagerfragment;
+package student.oschinaxwj.fragment;
 
 import android.os.Bundle;
 import android.view.Gravity;
@@ -7,23 +7,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import student.oschinaxwj.adapter.ViewPageFragmentAdapter;
-import student.oschinaxwj.base.BaseViewPagerFragment;
+import student.oschinaxwj.base.BaseFragment;
 
 /**
- * Created by user on 2015/6/9.
+ * Created by user on 2015/6/10.
  */
-public class TweetsViewPagerFragment extends BaseViewPagerFragment {
+public class BlogFragment extends BaseFragment{
+    public static final String BUNDLE_BLOG_TYPE = "BUNDLE_BLOG_TYPE";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         TextView textView = new TextView(getActivity());
-        textView.setText(TweetsViewPagerFragment.class.getSimpleName());
+        textView.setText(BlogFragment.class.getSimpleName());
         textView.setGravity(Gravity.CENTER);
         return textView;
-    }
-
-    @Override
-    protected void onSetupTabAdapter(ViewPageFragmentAdapter adapter) {
-
     }
 }
