@@ -21,4 +21,6 @@
     <color name="actionbar_item_background_pressed">#0b751e</color>
 
     <color name="list_divider_color">#DADADA</color>
+
+    <color name="my_information_option_pressed">#18be40</color>
 </resources>

@@ -39,4 +39,24 @@
     <string name="friends">同城</string>
     <string name="find_oscer">找人</string>
     <string name="shake">摇一摇</string>
+
+    <string name="blog">博客</string>
+    <string name="information">资料</string>
+    <string name="qrcode">二维码</string>
+    <string name="message">消息</string>
+    <string name="team">团队</string>
+    <string name="note">便签</string>
+    <string name="bookmarks">收藏夹</string>
+    <string name="user_score">积分</string>
+
+    <string name="my_information_unlogin_tips">未登录</string>
+
+    <string name="actionbar_title_profile">个人中心</string>
+    <string name="favorite">收藏</string>
+    <string name="following">关注</string>
+    <string name="follower">粉丝</string>
+    <string name="join_time">加入时间:</string>
+    <string name="location">所在地区:</string>
+    <string name="development_platform">开发平台:</string>
+    <string name="academic_focus">专长领域:</string>
 </resources>
