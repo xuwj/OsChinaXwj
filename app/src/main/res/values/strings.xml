@@ -32,4 +32,11 @@
     <string name="quick_option_find">找人</string>
 
     <string name="actionbar_title_search">搜索</string>
+
+    <string name="active">好友圈</string>
+    <string name="activities">活动</string>
+    <string name="scan">扫一扫</string>
+    <string name="friends">同城</string>
+    <string name="find_oscer">找人</string>
+    <string name="shake">摇一摇</string>
 </resources>

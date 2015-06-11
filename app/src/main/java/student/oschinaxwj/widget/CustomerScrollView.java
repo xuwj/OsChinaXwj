@@ -102,7 +102,6 @@ public class CustomerScrollView extends ScrollView {
     public boolean isNeedMove() {
         int offset = inner.getMeasuredHeight() - getHeight();
         int scrollY = getScrollY();
-        Log.e("---1---", scrollY + "");
         if (scrollY == 0 || scrollY == offset) {
             return true;
         }
