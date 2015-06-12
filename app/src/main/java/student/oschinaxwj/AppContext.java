@@ -8,6 +8,8 @@ import student.oschinaxwj.base.BaseApplication;
 public class AppContext extends BaseApplication {
     private static AppContext instance;
 
+    private boolean login;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -21,5 +23,9 @@ public class AppContext extends BaseApplication {
      */
     public static AppContext getInstance() {
         return instance;
+    }
+
+    public boolean isLogin() {
+        return login;
     }
 }

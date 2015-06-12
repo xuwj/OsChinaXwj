@@ -59,4 +59,8 @@
     <string name="location">所在地区:</string>
     <string name="development_platform">开发平台:</string>
     <string name="academic_focus">专长领域:</string>
+
+    <string name="hint_username">输入账号/邮箱</string>
+    <string name="hint_password">密码</string>
+    <string name="login">登录</string>
 </resources>
